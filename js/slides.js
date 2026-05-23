@@ -287,8 +287,7 @@
   }
 
   function slide17() {
-    return '<section class="slide" data-section="intro" data-title="AI活用の現在地" data-notes="飲食店でAIを日常的に活用している店舗は、今のところまだ少数派です。逆に言うと、今始めれば、ほとんどの競合より早い。">' +
-      '<section class="slide slide-metric" data-section="intro" data-title="AI活用の現在地" data-notes="飲食店でAIを日常的に活用している店舗は、今のところまだ少数派です。逆に言うと、今始めれば、ほとんどの競合より早い。">' +
+    return '<section class="slide slide-metric" data-section="intro" data-title="AI活用の現在地" data-notes="飲食店でAIを日常的に活用している店舗は、今のところまだ少数派です。逆に言うと、今始めれば、ほとんどの競合より早い。">' +
       '<div class="slide-content slide-content-center">' +
         '<p class="s-metric-lead">飲食店のAI活用状況（各調査より推計）</p>' +
         '<div class="s-metric-value">まだ少数派</div>' +
