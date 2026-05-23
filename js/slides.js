@@ -96,16 +96,22 @@
   }
 
   function slide06() {
+    var cell = 'background:var(--c-primary-pale);border-radius:12px;padding:1.2rem .6rem;text-align:center;border:2.5px solid var(--c-primary-light);';
+    var num  = 'display:inline-block;background:var(--c-primary);color:#fff;border-radius:50%;width:1.6em;height:1.6em;line-height:1.6em;font-size:clamp(1rem,1.8vw,1.8rem);margin-bottom:.5rem;font-weight:700;';
+    var ico  = 'font-size:clamp(2.2rem,5vw,5rem);display:block;margin-bottom:.4rem;';
+    var ttl  = 'font-size:clamp(.95rem,1.8vw,1.8rem);font-weight:700;color:#333;line-height:1.45;';
+    var note = 'background:var(--c-primary-pale);border-left:5px solid var(--c-primary);border-radius:0 8px 8px 0;padding:.8rem 1.4rem;font-size:clamp(1rem,1.9vw,1.9rem);color:#333;font-weight:600;';
     return '<section class="slide" data-section="cover" data-title="今日の流れ" data-notes="今日の流れを説明します。5つのワークを順番にやっていきます。全部スマホで実際に手を動かします。説明を聞くだけではなく、今日この場で体験します。">' +
       H('今日の流れ — 5つのワーク') +
-      '<div class="slide-content">' +
-        '<div class="s-steps">' +
-          '<div class="s-step-row"><div class="s-step-num">①</div><div><div class="s-step-text"><strong>ChatGPT登録＋オプトアウト設定</strong>（AIを使う準備）</div></div></div>' +
-          '<div class="s-step-row"><div class="s-step-num">②</div><div><div class="s-step-text"><strong>料理写真のAI加工</strong>（撮り直しなしでクオリティを上げる）</div></div></div>' +
-          '<div class="s-step-row"><div class="s-step-num">③</div><div><div class="s-step-text"><strong>Instagram投稿文の生成</strong>（週1の文章作りを短縮）</div></div></div>' +
-          '<div class="s-step-row"><div class="s-step-num">④</div><div><div class="s-step-text"><strong>マニュアルの自動化</strong>（口頭説明をテキスト資産に）</div></div></div>' +
-          '<div class="s-step-row"><div class="s-step-num">⑤</div><div><div class="s-step-text"><strong>LINE配信文の生成</strong>（お客さんを自然に呼び戻す）</div></div></div>' +
+      '<div class="slide-content" style="justify-content:center;">' +
+        '<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-bottom:1rem;">' +
+          '<div style="' + cell + '"><span style="' + num + '">①</span><span style="' + ico + '">🔑</span><div style="' + ttl + '">ChatGPT<br>登録</div></div>' +
+          '<div style="' + cell + '"><span style="' + num + '">②</span><span style="' + ico + '">📸</span><div style="' + ttl + '">料理写真<br>AI加工</div></div>' +
+          '<div style="' + cell + '"><span style="' + num + '">③</span><span style="' + ico + '">📲</span><div style="' + ttl + '">Instagram<br>投稿文</div></div>' +
+          '<div style="' + cell + '"><span style="' + num + '">④</span><span style="' + ico + '">📋</span><div style="' + ttl + '">マニュアル<br>自動化</div></div>' +
+          '<div style="' + cell + '"><span style="' + num + '">⑤</span><span style="' + ico + '">💬</span><div style="' + ttl + '">LINE<br>配信文</div></div>' +
         '</div>' +
+        '<div style="' + note + '">📱 全部スマホで完結。パソコン不要・クレカ不要・全部無料</div>' +
       '</div>' +
     '</section>';
   }
@@ -201,15 +207,37 @@
   }
 
   function slide13() {
-    return '<section class="slide" data-section="intro" data-title="AIは補助スタッフ" data-notes="AIを一言で言うと、文章を書いたり、写真を加工したり、マニュアルを整理したりしてくれる補助スタッフです。給料なし、深夜でも即答、文句なし。飲食店の「地味に面倒な作業」が得意です。間違えることもあるので、数字や固有名詞は必ず自分で確認してください。">' +
-      H('AIは「補助スタッフ」と考えるとシンプル') +
-      '<div class="slide-content">' +
-        '<ul class="s-list">' +
-          '<li class="s-list-callout">文章を書く・写真を加工する・マニュアルをまとめる ─ 全部やってくれる</li>' +
-          '<li class="s-list-arrow">24時間稼働・深夜でも即答・給料不要</li>' +
-          '<li class="s-list-arrow">間違えることもある → 数字・固有名詞は必ず確認する</li>' +
-          '<li class="s-list-sub">→ 「ゼロから自分で書く」より速い。そこが価値</li>' +
-        '</ul>' +
+    var box  = 'border-radius:12px;padding:1.3rem 1.4rem;text-align:center;flex:1;min-width:0;';
+    var boxN = 'background:var(--c-primary-pale);border:3px solid var(--c-primary);' + box;
+    var boxH = 'background:#fffae0;border:3px solid var(--c-accent);' + box;
+    var ico  = 'font-size:clamp(2.4rem,5.5vw,5.5rem);display:block;margin-bottom:.4rem;';
+    var lbl  = 'font-size:clamp(1.1rem,2.2vw,2.2rem);font-weight:700;color:#333;line-height:1.35;';
+    var sub  = 'font-size:clamp(.9rem,1.7vw,1.7rem);margin-top:.35rem;font-weight:600;';
+    var arr  = 'font-size:clamp(1.6rem,3.5vw,3.5rem);color:var(--c-primary);padding:0 .6rem;flex-shrink:0;font-weight:900;';
+    var note = 'background:var(--c-primary-pale);border-left:5px solid var(--c-primary);border-radius:0 8px 8px 0;padding:.8rem 1.4rem;font-size:clamp(1rem,1.9vw,1.9rem);color:#333;font-weight:600;';
+    return '<section class="slide" data-section="intro" data-title="ChatGPTの動き方" data-notes="AIを一言で言うと、文章を書いたり、写真を加工したり、マニュアルを整理したりしてくれる補助スタッフです。給料なし、深夜でも即答、文句なし。飲食店の地味に面倒な作業が得意です。間違えることもあるので、数字や固有名詞は必ず自分で確認してください。">' +
+      H('ChatGPT は「賢い補助スタッフ」') +
+      '<div class="slide-content" style="justify-content:center;">' +
+        '<div style="display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:nowrap;margin-bottom:1rem;">' +
+          '<div style="' + boxN + '">' +
+            '<span style="' + ico + '">📱</span>' +
+            '<div style="' + lbl + '">スマホで<br>話しかける</div>' +
+            '<div style="' + sub + 'color:var(--c-primary);">日本語でOK</div>' +
+          '</div>' +
+          '<div style="' + arr + '">▶</div>' +
+          '<div style="' + boxH + '">' +
+            '<span style="' + ico + '">🤖</span>' +
+            '<div style="' + lbl + '">ChatGPT<br>が処理</div>' +
+            '<div style="' + sub + 'color:#a07800;">数秒で完成</div>' +
+          '</div>' +
+          '<div style="' + arr + '">▶</div>' +
+          '<div style="' + boxN + '">' +
+            '<span style="' + ico + '">✏️</span>' +
+            '<div style="' + lbl + '">投稿文・<br>マニュアル完成</div>' +
+            '<div style="' + sub + 'color:var(--c-primary);">そのまま使える</div>' +
+          '</div>' +
+        '</div>' +
+        '<div style="' + note + '">💡 コピー&amp;ペーストが唯一の操作。それ以外の難しい操作は一切ありません。</div>' +
       '</div>' +
     '</section>';
   }
@@ -692,29 +720,38 @@
   }
 
   function slide49() {
-    return '<section class="slide" data-section="work04" data-title="マニュアル問題" data-notes="飲食店で地味に大変なのが新人への説明です。同じことを何度も繰り返している。マニュアルを作る時間もない。でも誰かしか知らない仕事がたくさんある。これが「属人化」という状態です。">' +
+    var colB = 'background:#fef3f2;border:3px solid #f87171;border-radius:12px;padding:1.2rem 1.4rem;font-size:clamp(1rem,1.8vw,1.8rem);';
+    var colA = 'background:#f0fdf4;border:3px solid #4ade80;border-radius:12px;padding:1.2rem 1.4rem;font-size:clamp(1rem,1.8vw,1.8rem);';
+    var badge = 'font-weight:700;font-size:clamp(1.1rem,2vw,2rem);margin-bottom:.6rem;';
+    var li   = 'padding:.4rem 0;line-height:1.5;';
+    var arr  = 'font-size:clamp(1.8rem,4vw,4rem);color:var(--c-primary);text-align:center;font-weight:900;';
+    var aib  = 'background:var(--c-accent);color:#333;font-size:clamp(.9rem,1.5vw,1.5rem);font-weight:700;border-radius:6px;padding:.25rem .6rem;display:block;text-align:center;margin-top:.35rem;';
+    var note = 'background:var(--c-primary-pale);border-left:5px solid var(--c-primary);border-radius:0 8px 8px 0;padding:.8rem 1.4rem;font-size:clamp(1rem,1.9vw,1.9rem);color:#333;font-weight:600;';
+    return '<section class="slide" data-section="work04" data-title="マニュアル問題" data-notes="飲食店で地味に大変なのが新人への説明です。同じことを何度も繰り返している。マニュアルを作る時間もない。でも誰かしか知らない仕事がたくさんある。これが属人化という状態です。">' +
       H('「同じ説明を何度もしている」問題') +
-      '<div class="slide-content">' +
-        '<div class="s-compare">' +
-          '<div class="s-compare-col neutral">' +
-            '<div class="s-compare-badge">属人化している状態</div>' +
-            '<div class="s-compare-title">今起きていること</div>' +
-            '<ul class="s-compare-items">' +
-              '<li>同じ説明を毎回一からしている</li>' +
-              '<li>人によってやり方がバラバラ</li>' +
-              '<li>自分がいないと動きが止まる</li>' +
+      '<div class="slide-content" style="justify-content:center;">' +
+        '<div style="display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;margin-bottom:.8rem;">' +
+          '<div style="' + colB + '">' +
+            '<div style="' + badge + 'color:#dc2626;">😓 マニュアルなし</div>' +
+            '<ul style="list-style:none;">' +
+              '<li style="' + li + '">・同じ説明を何度もする</li>' +
+              '<li style="' + li + '">・人によってやり方がバラバラ</li>' +
+              '<li style="' + li + '">・自分がいないと回らない</li>' +
+              '<li style="' + li + '">・文字にする時間がない</li>' +
             '</ul>' +
           '</div>' +
-          '<div class="s-compare-col positive">' +
-            '<div class="s-compare-badge">AIマニュアルがある状態</div>' +
-            '<div class="s-compare-title">変わること</div>' +
-            '<ul class="s-compare-items">' +
-              '<li>「マニュアル見て」で済む</li>' +
-              '<li>更新・追記が短時間でできる</li>' +
-              '<li>自分がいなくても現場が動く</li>' +
+          '<div style="' + arr + '">➜<span style="' + aib + '">AI活用</span></div>' +
+          '<div style="' + colA + '">' +
+            '<div style="' + badge + 'color:#16a34a;">😊 AIマニュアルあり</div>' +
+            '<ul style="list-style:none;">' +
+              '<li style="' + li + '">・「マニュアル見て」で済む</li>' +
+              '<li style="' + li + '">・やり方が統一される</li>' +
+              '<li style="' + li + '">・自分がいなくても回る</li>' +
+              '<li style="' + li + '">・しゃべるだけで完成</li>' +
             '</ul>' +
           '</div>' +
         '</div>' +
+        '<div style="' + note + '">🎤 スマホに向かって2分しゃべる → コピペで送る → マニュアル完成</div>' +
       '</div>' +
     '</section>';
   }
